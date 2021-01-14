@@ -56,7 +56,7 @@
 }
 
 .header__options--active > .MuiSvgIcon-root {
-    color: #2e81f4;
+    color: #2e81f4 !important;
 }
 
 .header__options--active{
@@ -73,7 +73,6 @@
 
 .header__info {
     display: flex;
-    flex:1;
     align-items: center;
 
 }
@@ -85,5 +84,5 @@
 
 .header__right {
     display: flex;
-    flex: 1;
+    justify-content: flex-end;
 }

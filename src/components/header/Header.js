@@ -11,7 +11,7 @@ import SubscriptionsOptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOu
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
 import React from "react";
 
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -26,6 +26,7 @@ const Header = () => {
         <SearchIcon />
         <input placeholder="Search Facebook" type="text" />
       </div>
+
       <div className="header__center">
 
         <div className="header__options header__options--active">
@@ -43,29 +44,32 @@ const Header = () => {
         <div className="header__options">
           <SupervisedUserCircleIcon fontsize="large" />
         </div>
-        <div className="header__right">
+        
+      </div>
+
+      <div className="header__right">
           <div className="header__info">
             <Avatar />
             <h4>dalo</h4>
           </div>
+          
+
+          <IconButton>
+            <AddIcon />
+          </IconButton>
+
+          <IconButton>
+            <ForumIcon />
+          </IconButton>
+
+          <IconButton>
+            <NotificationsActiveIcon />
+          </IconButton>
+
+          <IconButton>
+            <ExpandMore />
+          </IconButton>
         </div>
-
-        <IconButton>
-          <AddIcon />
-        </IconButton>
-        
-        <IconButton>
-          <ForumIcon />
-        </IconButton>
-
-        <IconButton>
-          <NotificationsActiveIcon />
-        </IconButton>
-
-        <IconButton>
-          <ExpandMore />
-        </IconButton>
-      </div>
     </div>
   );
 };
