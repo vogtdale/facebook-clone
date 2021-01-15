@@ -9,14 +9,14 @@ import {
 import React from "react";
 import "./Post.css";
 
-const Post = ({ profilePic, image, username, timesatmp, message }) => {
+const Post = ({ profilePic, image, username, timestamp, message }) => {
   return (
     <div className="post">
       <div className="post__top">
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__topInfo">
           <h3> {username}</h3>
-          <p>Timestamp...</p>
+          <p>{new Date(timestamp).toDateString()}</p>
         </div>
       </div>
 

@@ -10,10 +10,12 @@ import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined";
 import SubscriptionsOptionsOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined";
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
 import React from "react";
+import { useStateValue } from "../../provider/StateProvider";
 
 import "./Header.css";
 
 const Header = () => {
+  const [{user}, dispatch] = useStateValue()
   return (
     <div className="header">
       <div className="header__left">
@@ -30,27 +32,27 @@ const Header = () => {
       <div className="header__center">
 
         <div className="header__options header__options--active">
-          <HomeIcon fontsize="large" />
+          <HomeIcon fontSize="large" />
         </div>
         <div className="header__options">
-          <FlagIcon fontsize="large" />
+          <FlagIcon fontSize="large" />
         </div>
         <div className="header__options">
-          <SubscriptionsOptionsOutlinedIcon fontsize="large" />
+          <SubscriptionsOptionsOutlinedIcon fontSize="large" />
         </div>
         <div className="header__options">
-          <StorefrontOutlinedIcon fontsize="large" />
+          <StorefrontOutlinedIcon fontSize="large" />
         </div>
         <div className="header__options">
-          <SupervisedUserCircleIcon fontsize="large" />
+          <SupervisedUserCircleIcon fontSize="large" />
         </div>
         
       </div>
 
       <div className="header__right">
           <div className="header__info">
-            <Avatar />
-            <h4>dalo</h4>
+            <Avatar src={user.photoURL}/>
+            <h4>{user.displayName}</h4>
           </div>
           
 
